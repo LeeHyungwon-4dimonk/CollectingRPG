@@ -51,3 +51,10 @@ UniTask : https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins
     ```
 - 역할은 인터페이스로 정의, 구현은 클래스에서 한다.
 - 데이터와 로직의 분리를 지향한다.
+
+## 시연 영상
+
+
+
+https://github.com/user-attachments/assets/8e91025f-fbdf-4bf0-b4f8-9554d5f7d6c9
+
