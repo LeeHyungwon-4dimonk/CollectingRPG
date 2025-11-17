@@ -1,5 +1,18 @@
 # CollectingRPG
 
+## 시연 영상
+
+https://github.com/user-attachments/assets/8e91025f-fbdf-4bf0-b4f8-9554d5f7d6c9
+
+## 본인이 맡은 역할
+
+- 캐릭터 편성 시스템 구현
+- 캐릭터/마법석 뽑기 시스템 및 DB 연동
+- 캐릭터/마법석 강화 시스템 및 DB 연동
+- 상점 일일 초기화, 광고 뽑기/일일 뽑기 등의 시간 초기화 및 갱신 시스템 구현
+- 인게임 증강 시스템 구현
+- 로비 씬 UI 구성 및 캐릭터 편성 연출
+
 ## ■ 사용한 외부 라이브러리
 
 UniTask : https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask
@@ -52,9 +65,5 @@ UniTask : https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins
 - 역할은 인터페이스로 정의, 구현은 클래스에서 한다.
 - 데이터와 로직의 분리를 지향한다.
 
-## 시연 영상
 
-
-
-https://github.com/user-attachments/assets/8e91025f-fbdf-4bf0-b4f8-9554d5f7d6c9
 
