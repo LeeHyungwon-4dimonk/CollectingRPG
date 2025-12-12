@@ -1,69 +1,103 @@
 # CollectingRPG
+수집형 RPG 장르의 오토배틀러 게임으로, 캐릭터 수집, 강화, 소환을 통한 오토배틀을 중심으로 시스템을 설계하였습니다.
+
+This repository is a **fork of the original team project**, reorganized for portfolio purposes.
 
 ## 시연 영상
 
 https://github.com/user-attachments/assets/8e91025f-fbdf-4bf0-b4f8-9554d5f7d6c9
 
-## 본인이 맡은 역할
+* 게임 다운로드 경로 : https://play.google.com/store/apps/details?id=com.CollectingRPG&hl=ko
 
-- 캐릭터 편성 시스템 구현
-- 캐릭터/마법석 뽑기 시스템 및 DB 연동
-- 캐릭터/마법석 강화 시스템 및 DB 연동
-- 상점 일일 초기화, 광고 뽑기/일일 뽑기 등의 시간 초기화 및 갱신 시스템 구현
-- 인게임 증강 시스템 구현
-- 로비 씬 UI 구성 및 캐릭터 편성 연출
+<br>
 
-## ■ 사용한 외부 라이브러리
+## 📌 Project Overview
 
-UniTask : https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask
-
-
-## ■ 네이밍 규칙
-| 대상 | 규칙 | 예시 |
-|------|------|------|
-| 클래스명 | PascalCase | `PlayerController`, `GameManager` |
-| public 변수 | PascalCase | `MaxHealth`, `PlayerCount` |
-| private 변수 | `_camelCase` (접두사 `_`) | `_currentHealth`, `_moveSpeed` |
-| 매개변수 | `camelCase` | `currentHealth`, `moveSpeed` |
-| 상수 | UPPER_CASE | `MAX_LEVEL`, `DEFAULT_SPEED` |
-| async 메서드 | PascalCase + `Async` | `LoadDataAsync()`, `SaveGameAsync()` |
-
-### Branch 네이밍
-- 개발 시 : feat/unit
-- 수정 시 : fix/unit 
-처럼 작성한다.
-
-## ■ 커밋 규칙
-
-|유형|내용|
-|-|-|
-|Feat|새로운 기능 추가를 한 경우|
-|Fix|버그를 수정을 한 경우|
-|Build|빌드 관련내용을 수정한 경우 (Project Setting)|
-|Test|테스트 Scene또는 코드를 추가한 경우|
-|Refactor|코드를 리펙토링한 경우|
-|Docs|주석이나 문서를 수정한 경우 (README 등)|
-|Release|버전을 릴리즈한 경우|
-|Create|프로젝트를 생성한 경우|
-|Chore|간단한 수정이 일어난 경우|
-
-## ■ 기타 규칙
-
-- Unity LifeCycle은 별도로 모아둔다.
-- Workspace 내의 자신의 이니셜 폴더에서 작업한다.
-- 서로 다른 씬에서 작업한다.
-- 클래스 하나가 너무 많은 기능을 가지지 않도록 하는 것을 지향한다.
-  - 예 : PlayerController → 입력 처리와 이동 로직만
-- ScriptableObject를 사용하여 게임 밸런스 수치, 설정값, 리소스 정보를 관리한다.
-  - ```cs
-    public class Stats : ScriptableObject
-    {
-      public int MaxHealth;
-      public float MoveSpeed;
-    }
-    ```
-- 역할은 인터페이스로 정의, 구현은 클래스에서 한다.
-- 데이터와 로직의 분리를 지향한다.
+| 항목 | 내용 |
+|------|------|
+| **프로젝트 유형** | 팀 프로젝트 (12인, 기획 6인 클라 6인) |
+| **장르** | Collecting RPG |
+| **엔진** | Unity |
+| **언어** | C# |
+| **개발 방식** | Git Flow / Feature Branch |
+| **진행 기간** | *2025-08-18 ~ 2025-10-16* |
+| **팀 규모** | *12명* |
+| **개인 역할** | Gameplay & System Programming |
 
 
+## 🧑‍💻 My Contributions
 
+### 🎯 Gameplay & Core Systems
+- 캐릭터 **편성** 시스템 구현  
+- **캐릭터/마법석 뽑기** 시스템 구현  
+- 데이터베이스 연동형 **강화 시스템** 제작  
+- 일일 초기화, 상점 로직, 광고 기반 소환 등 **게임 루프 핵심 로직 개발**  
+- 인게임 **증강(Augment) 시스템** 구현
+
+### 🎨 UI & UX
+- 로비 화면 UI 개발
+- 캐릭터 선택 애니메이션 구현
+
+### 🔄 Backend Integration
+- 서버/DB 연동 로직 작성
+- 데이터 요청 & 응답 기반 시스템 구성
+- 게임 내 정보 로딩/저장/갱신 흐름 설계
+
+<br>
+
+## 🛠 Tech Stack
+
+### ✔ Engine & Language
+- Unity 2022 / C#
+
+### ✔ Tools & Libraries
+- **UniTask** (비동기 처리)
+- Git / GitHub
+
+### ✔ Workflows
+- Feature Branch 기반 브랜치 전략  
+- 코드 리뷰 및 팀 협업 경험  
+
+<br>
+
+
+## 📁 My Code Overview
+
+하기 경로에 제가 직접 구현한 스크립트들이 정리되어 있습니다.
+
+Assets/WorkSpace/LHW/Scripts/
+
+### 🔹 캐릭터 편성 시스템
+- TeamOrganizeManager.cs
+
+📂 Path: `Assets/WorkSpace/LHW/Scripts/Lobby/CharacterCompositionUI/`
+
+### 🔹 캐릭터 편성 연출
+- SelectedCharacterUnit.cs
+
+📂 Path: `Assets/WorkSpace/LHW/Scripts/Lobby/CharacterCompositionUI/`
+
+### 🔹 캐릭터 및 마법석 뽑기 시스템
+- RandomGachaSystem.cs
+
+📂 Path: `Assets/WorkSpace/LHW/Scripts/Lobby/RandomGacha/`
+
+### 🔹 캐릭터 및 마법석 강화 시스템
+- UpgradeUnitData.cs
+- MagicStoneUpgradeUnit.cs
+
+📂 Path: `Assets/WorkSpace/LHW/Scripts/Lobby/Upgrade/`
+
+📂 Path: `Assets/WorkSpace/LHW/Scripts/Temp/SO/`
+
+### 🔹 게임 내 시간 기반 콘텐츠 관리 매니저
+- TimeManager.cs
+
+📂 Path: `Assets/WorkSpace/LHW/Scripts/Manager/`
+
+### 🔹 파이어베이스 데이터베이스 연동(Unitask 활용)
+- CharDB.cs
+- MagicStoneDB.cs
+- TimeDB.cs
+
+📂 Path: `Assets/WorkSpace/LHW/Scripts/DB/`
